@@ -148,9 +148,6 @@
 
             foreach (var value in item)
             {
-                //// Boolean
-                //if (value.Value.BOOL) { writer.WriteBoolean(value.Key, value.Value.BOOL); continue; }
-
                 // Number
                 if (value.Value is Primitive && ((Primitive)value.Value).Type == DynamoDBEntryType.Numeric) { writer.WriteNumber(value.Key, Convert.ToDecimal(value.Value)); continue; }
 
@@ -195,7 +192,7 @@
         }
 
         /// <summary>
-        /// The IsJson.
+        /// Check if input string is Json format, looking for starting '{' and ending '}'.
         /// </summary>
         /// <param name="input">The input<see cref="string"/>.</param>
         /// <returns>The <see cref="bool"/>.</returns>
