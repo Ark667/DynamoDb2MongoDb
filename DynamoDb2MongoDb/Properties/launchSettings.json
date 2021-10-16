@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "DynamoDb2MongoDb": {
+      "commandName": "Project",
+      "commandLineArgs": "copy --dynamoaccesskey ** --dynamosecretaccesskey ** --dynamoregion eu-west-3 --dynamotable \"SearchResults\" --mongoconnectionstring \"mongodb://localhost:27027/mydance\""
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
