@@ -100,6 +100,19 @@ MongoDb also provide some desirable querying features not present on DynamoDb.
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
+You can execute current release with Docker.
+
+```sh
+docker run --rm --network=host ghcr.io/ark667/dynamodb2mongodb:master copy 
+    --dynamoaccesskey *** 
+    --dynamosecretaccesskey *** 
+    --dynamoregion [region] 
+    --mongoconnectionstring "mongodb://[host]:[port]/[database]" 
+    --dynamotable [tablename]
+```
+
+You can also clone the repo and build it yourself.
+
 1. Clone the repo
 
    ```sh
@@ -124,16 +137,33 @@ To get a local copy up and running follow these simple example steps.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Basic usage is pretty straightforrward. Just call with required keys and parameters.
+Basic usage is pretty straightforrward. Just call copy verb with required keys and parameters.
 
 ```sh
-.\DynamoDb2MongoDb.exe 
+.\DynamoDb2MongoDb.exe copy
     --dynamoaccesskey *** 
     --dynamosecretaccesskey *** 
     --dynamoregion [region] 
     --mongoconnectionstring "mongodb://[host]:[port]/[database]" 
     --dynamotable [tablename]
 ```
+
+Can also be executed from Docker container.
+
+```sh
+docker build -f ".\DynamoDb2MongoDb\Dockerfile" .
+```
+
+```sh
+docker run --rm --network=host dynamodb2mongodb copy 
+    --dynamoaccesskey *** 
+    --dynamosecretaccesskey *** 
+    --dynamoregion [region] 
+    --mongoconnectionstring "mongodb://[host]:[port]/[database]" 
+    --dynamotable [tablename]
+```
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
