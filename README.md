@@ -201,5 +201,5 @@ Project Link: [https://github.com/Ark667/DynamoDb2MongoDb](https://github.com/Ar
 [license-shield]: https://img.shields.io/github/license/Ark667/DynamoDb2MongoDb.svg?style=for-the-badge
 [license-url]: https://github.com/Ark667/DynamoDb2MongoDb/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://www.linkedin.com/in/aingeru/
 [product-screenshot]: images/screenshot.png
