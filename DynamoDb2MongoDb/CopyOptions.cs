@@ -14,7 +14,7 @@
     /// Defines the <see cref="CopyOptions" />.
     /// </summary>
     [Verb("copy", HelpText = "Copy data from source dynmoDb table to target MongoDb collection.")]
-    internal class CopyOptions
+    public class CopyOptions
     {
         /// <summary>
         /// Gets the Examples.
@@ -199,7 +199,24 @@
         public static bool IsJson(string input)
         {
             input = input.Trim();
-            return input.StartsWith("{") && input.EndsWith("}");
+
+            if ((input.StartsWith("{") && input.EndsWith("}")) || 
+                (input.StartsWith("[") && input.EndsWith("]"))) 
+            {
+                try
+                {
+                    _ = System.Json.JsonValue.Parse(input);
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
