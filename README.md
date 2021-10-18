@@ -99,12 +99,12 @@ MongoDb also provide some desirable querying features not present on DynamoDb.
 
 You can execute current release with Docker.
 
-```sh
-docker run --rm --network=host ghcr.io/ark667/dynamodb2mongodb:master copy 
-    --dynamoaccesskey *** 
-    --dynamosecretaccesskey *** 
-    --dynamoregion [region] 
-    --mongoconnectionstring "mongodb://[host]:[port]/[database]" 
+```pws
+docker run --rm --network=host ghcr.io/ark667/dynamodb2mongodb:master copy `
+    --dynamoaccesskey *** `
+    --dynamosecretaccesskey *** `
+    --dynamoregion [region] `
+    --mongoconnectionstring "mongodb://[host]:[port]/[database]" `
     --dynamotable [tablename]
 ```
 
@@ -112,13 +112,13 @@ You can also clone the repo and build it yourself.
 
 1. Clone the repo
 
-   ```sh
+   ```pws
    git clone https://github.com/Ark667/DynamoDb2MongoDb.git
    ```
 
 2. Build application
 
-   ```sh
+   ```pws
    dotnet build DynamoDb2MongoDb.sln
    ```
 
@@ -136,31 +136,29 @@ You can also clone the repo and build it yourself.
 
 Basic usage is pretty straightforrward. Just call copy verb with required keys and parameters.
 
-```sh
-.\DynamoDb2MongoDb.exe copy
-    --dynamoaccesskey *** 
-    --dynamosecretaccesskey *** 
-    --dynamoregion [region] 
-    --mongoconnectionstring "mongodb://[host]:[port]/[database]" 
+```pws
+.\DynamoDb2MongoDb.exe copy `
+    --dynamoaccesskey *** `
+    --dynamosecretaccesskey *** `
+    --dynamoregion [region] `
+    --mongoconnectionstring "mongodb://[host]:[port]/[database]" `
     --dynamotable [tablename]
 ```
 
 Can also be executed from Docker container.
 
-```sh
+```pws
 docker build -f ".\DynamoDb2MongoDb\Dockerfile" .
 ```
 
-```sh
-docker run --rm --network=host dynamodb2mongodb copy 
-    --dynamoaccesskey *** 
-    --dynamosecretaccesskey *** 
-    --dynamoregion [region] 
-    --mongoconnectionstring "mongodb://[host]:[port]/[database]" 
+```pws
+docker run --rm --network=host dynamodb2mongodb copy `
+    --dynamoaccesskey *** `
+    --dynamosecretaccesskey *** `
+    --dynamoregion [region] `
+    --mongoconnectionstring "mongodb://[host]:[port]/[database]" `
     --dynamotable [tablename]
 ```
-
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -182,14 +180,12 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->
@@ -202,7 +198,6 @@ Project Link: [https://github.com/Ark667/DynamoDb2MongoDb](https://github.com/Ar
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 <!-- ACKNOWLEDGMENTS
 ## Acknowledgments
 
@@ -212,7 +207,6 @@ Project Link: [https://github.com/Ark667/DynamoDb2MongoDb](https://github.com/Ar
 
 <p align="right">(<a href="#top">back to top</a>)</p>
  -->
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
