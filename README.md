@@ -79,8 +79,6 @@ This project was intended to make a fast data transfer from a bunch of DynamoDb 
 Provisioned DynamoDb tables became too expensive and decided to migrate to managed MongoDb service on K8s cluster.
 MongoDb also provide some desirable querying features not present on DynamoDb.
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I16OYC5)
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
