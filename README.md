@@ -44,7 +44,7 @@
     ·
     <a href="https://github.com/Ark667/DynamoDb2MongoDb/issues">Request Feature</a>
     <br />    
-    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#798c94', 'I2I16OYC5');kofiwidget2.draw();</script> 
+    [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I16OYC5)
   </p>
 </div>
 
