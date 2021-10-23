@@ -44,10 +44,10 @@
     ·
     <a href="https://github.com/Ark667/DynamoDb2MongoDb/issues">Request Feature</a>
     <br />    
-    [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I16OYC5)
   </p>
 </div>
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I16OYC5)
 
 
 <!-- TABLE OF CONTENTS -->
