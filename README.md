@@ -185,7 +185,9 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Feel free to use the code in this repository as it is under MIT license. See `LICENSE.txt` for more information.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I16OYC5)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
