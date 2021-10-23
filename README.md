@@ -33,7 +33,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
-<h3 align="center">DynamoDb2MongoDb</h3>
+<h1 align="center">DynamoDb2MongoDb</h1>
 
   <p align="center">
     Simple .Net5 application for transfering DynamoDb table data to MongoDb collection.
