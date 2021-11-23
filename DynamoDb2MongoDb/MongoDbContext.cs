@@ -3,6 +3,7 @@
     using MongoDB.Bson;
     using MongoDB.Bson.Serialization;
     using MongoDB.Driver;
+    using System;
 
     /// <summary>
     /// Defines the <see cref="MongoDbContext" />.
@@ -15,14 +16,16 @@
         public IMongoDatabase Database { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MongoDbContext"/> class.
+        /// Initializes a new instance of the <see cref="MongoDbContext"/> class. The specified database is used for operations, no as authentication as MongoDb default!.
         /// </summary>
         /// <param name="connectionstring">The connectionstring<see cref="string"/>.</param>
         public MongoDbContext(string connectionstring)
         {
-            var url = new MongoUrl(connectionstring);
+            ParseConnectionString(connectionstring, out var clientConnectionstring, out var databaseName);
+
+            var url = new MongoUrl(clientConnectionstring);
             var client = new MongoClient(url);
-            Database = client.GetDatabase(url.DatabaseName);
+            Database = client.GetDatabase(databaseName);
         }
 
         /// <summary>
@@ -55,6 +58,28 @@
         public void Drop(string collectionName)
         {
             Database.DropCollection(collectionName);
+        }
+
+        /// <summary>
+        /// The ParseConnectionString. The default pourpose of database specification in connection string is for authentication, this class uses for
+        /// for database operations for convenience, so the connection string is parsed to use on mongodb driver parameters as required.
+        /// </summary>
+        /// <param name="sourceConnectionstring">The connectionstring<see cref="string"/>.</param>
+        /// <param name="connectionstring">The clientConnectionstring<see cref="string"/>.</param>
+        /// <param name="databaseName">The databaseName<see cref="string"/>.</param>
+        public static void ParseConnectionString(string sourceConnectionstring, out string connectionstring, out string databaseName)
+        {
+            try
+            {
+                var uri = new Uri(sourceConnectionstring);
+                connectionstring = sourceConnectionstring.Replace(uri.LocalPath, string.Empty);
+                databaseName = uri.LocalPath.Replace("/", string.Empty);
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Invalid mongodb connection string", ex);
+            }
+
         }
     }
 }

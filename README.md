@@ -160,7 +160,16 @@ docker run --rm --network=host dynamodb2mongodb copy
     --dynamotable [tablename]
 ```
 
+If you need authentication. Specified database is used for database operations, not as authetication database as default mongodb behaviour on connection string.
 
+```sh
+docker run --rm --network=host dynamodb2mongodb copy 
+    --dynamoaccesskey *** 
+    --dynamosecretaccesskey *** 
+    --dynamoregion [region] 
+    --mongoconnectionstring "mongodb://[user]:[password]@[host]:[port]/[database]" 
+    --dynamotable [tablename]
+```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
