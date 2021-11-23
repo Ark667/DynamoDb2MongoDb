@@ -33,7 +33,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
-<h3 align="center">DynamoDb2MongoDb</h3>
+<h1 align="center">DynamoDb2MongoDb</h1>
 
   <p align="center">
     Simple .Net5 application for transfering DynamoDb table data to MongoDb collection.
@@ -43,9 +43,9 @@
     <a href="https://github.com/Ark667/DynamoDb2MongoDb/issues">Report Bug</a>
     ·
     <a href="https://github.com/Ark667/DynamoDb2MongoDb/issues">Request Feature</a>
+    <br />    
   </p>
 </div>
-
 
 
 <!-- TABLE OF CONTENTS -->
@@ -99,12 +99,12 @@ MongoDb also provide some desirable querying features not present on DynamoDb.
 
 You can execute current release with Docker.
 
-```sh
-docker run --rm --network=host ghcr.io/ark667/dynamodb2mongodb:master copy 
-    --dynamoaccesskey *** 
-    --dynamosecretaccesskey *** 
-    --dynamoregion [region] 
-    --mongoconnectionstring "mongodb://[host]:[port]/[database]" 
+```pws
+docker run --rm --network=host ghcr.io/ark667/dynamodb2mongodb:master copy `
+    --dynamoaccesskey *** `
+    --dynamosecretaccesskey *** `
+    --dynamoregion [region] `
+    --mongoconnectionstring "mongodb://[host]:[port]/[database]" `
     --dynamotable [tablename]
 ```
 
@@ -112,13 +112,13 @@ You can also clone the repo and build it yourself.
 
 1. Clone the repo
 
-   ```sh
+   ```pws
    git clone https://github.com/Ark667/DynamoDb2MongoDb.git
    ```
 
 2. Build application
 
-   ```sh
+   ```pws
    dotnet build DynamoDb2MongoDb.sln
    ```
 
@@ -136,33 +136,33 @@ You can also clone the repo and build it yourself.
 
 Basic usage is pretty straightforrward. Just call copy verb with required keys and parameters.
 
-```sh
-.\DynamoDb2MongoDb.exe copy
-    --dynamoaccesskey *** 
-    --dynamosecretaccesskey *** 
-    --dynamoregion [region] 
-    --mongoconnectionstring "mongodb://[host]:[port]/[database]" 
+```pws
+.\DynamoDb2MongoDb.exe copy `
+    --dynamoaccesskey *** `
+    --dynamosecretaccesskey *** `
+    --dynamoregion [region] `
+    --mongoconnectionstring "mongodb://[host]:[port]/[database]" `
     --dynamotable [tablename]
 ```
 
 Can also be executed from Docker container.
 
-```sh
+```pws
 docker build -f ".\DynamoDb2MongoDb\Dockerfile" .
 ```
 
-```sh
-docker run --rm --network=host dynamodb2mongodb copy 
-    --dynamoaccesskey *** 
-    --dynamosecretaccesskey *** 
-    --dynamoregion [region] 
-    --mongoconnectionstring "mongodb://[host]:[port]/[database]" 
+```pws
+docker run --rm --network=host dynamodb2mongodb copy `
+    --dynamoaccesskey *** `
+    --dynamosecretaccesskey *** `
+    --dynamoregion [region] `
+    --mongoconnectionstring "mongodb://[host]:[port]/[database]" `
     --dynamotable [tablename]
 ```
 
 If you need authentication. Specified database is used for database operations, not as authetication database as default mongodb behaviour on connection string.
 
-```sh
+```pws
 docker run --rm --network=host dynamodb2mongodb copy 
     --dynamoaccesskey *** 
     --dynamosecretaccesskey *** 
@@ -191,14 +191,14 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Feel free to use the code in this repository as it is under MIT license. See `LICENSE.txt` for more information.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I16OYC5)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->
@@ -211,7 +211,6 @@ Project Link: [https://github.com/Ark667/DynamoDb2MongoDb](https://github.com/Ar
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 <!-- ACKNOWLEDGMENTS
 ## Acknowledgments
 
@@ -221,7 +220,6 @@ Project Link: [https://github.com/Ark667/DynamoDb2MongoDb](https://github.com/Ar
 
 <p align="right">(<a href="#top">back to top</a>)</p>
  -->
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
