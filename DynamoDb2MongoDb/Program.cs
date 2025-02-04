@@ -1,30 +1,30 @@
-﻿namespace DynamoDb2MongoDb
-{
-    using CommandLine;
-    using System;
+﻿using CommandLine;
+using System;
 
+namespace DynamoDb2MongoDb;
+
+/// <summary>
+/// Defines the <see cref="Program" />.
+/// </summary>
+internal class Program
+{
     /// <summary>
-    /// Defines the <see cref="Program" />.
+    /// The Main.
     /// </summary>
-    internal class Program
+    /// <param name="args">The args<see cref="string[]"/>.</param>
+    /// <returns>The <see cref="int"/>.</returns>
+    internal static int Main(string[] args)
     {
-        /// <summary>
-        /// The Main.
-        /// </summary>
-        /// <param name="args">The args<see cref="string[]"/>.</param>
-        /// <returns>The <see cref="int"/>.</returns>
-        internal static int Main(string[] args)
+        try
         {
-            try
-            {
-                return Parser.Default.ParseArguments<CopyOptions>(args)
-                    .MapResult((CopyOptions opts) => CopyOptions.Copy(opts), errs => 1);
-            }
-            catch (System.Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-                throw;
-            }
+            return Parser.Default
+                .ParseArguments<CopyOptions>(args)
+                .MapResult((CopyOptions opts) => CopyOptions.Copy(opts), errs => 1);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+            throw;
         }
     }
 }
